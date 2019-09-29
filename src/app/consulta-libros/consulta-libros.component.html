@@ -1,0 +1,25 @@
+<div>
+    <h6 class="h6"> Lista de tareas</h6>
+  </div>
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Id</th>
+          <th>ISBN</th>
+          <th>Titulo</th>
+          <th>Precio de venta</th>
+          <th>Popular</th>
+  
+        </tr>
+      </thead>
+      <tr *ngFor="let libro of libros">
+        <td>{{libro.id}}</td>
+        <td>{{libro.isbn}}</td>
+        <td>{{libro.titulo}}</td>
+        <td>{{libro.precio_de_venta}}</td>
+        <td><span *ngIf="libro.popular===true;"> <b>Si</b></span><ng-template #inpopular><span><b>No</b></span></ng-template></td>
+  
+      </tr>
+    </table>
+  </div>

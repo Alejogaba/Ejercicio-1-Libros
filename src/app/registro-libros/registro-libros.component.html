@@ -1,0 +1,34 @@
+<div class="container">
+        <h1>Registro de libros</h1>
+        
+          <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input [(ngModel)]="libro.isbn"  class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="Titulo">Titulo</label>
+            <input [(ngModel)]="libro.titulo" class="form-control">
+          </div>
+
+          <div class="form-group">
+                <label for="Precio">Precio de venta</label>
+                <input [(ngModel)]="libro.precio_de_venta" class="form-control">
+              </div>
+
+     <div class="form-group">
+            
+        <div class="checkbox">
+                <label>Popular
+                <input [(ngModel)]="libro.popular" type="checkbox" class="form-control fill-right" data-toggle="toggle">
+            </label>
+            </div>
+           
+            
+          </div>
+
+          <button class="btn btn-success" (click)="AddLibro()">Registrar</button>
+    
+        
+        
+    </div>
