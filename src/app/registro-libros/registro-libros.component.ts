@@ -33,10 +33,8 @@ reset() {
   }
   AddLibro(): void {
     if (!this.libro) { return; }
-    this.libroservice.add(this.libro)
-      .subscribe( libro  => {
-          alert('Se agrego un nuevo libro =>'+libro.id);
-             });
+    this.libroservice.add(this.libro).subscribe();
+  this.ngOnInit();
   }
   Add():void{
     this.libroservice.Guardarlocal(this.libro)

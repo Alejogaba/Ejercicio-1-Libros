@@ -9,7 +9,7 @@ export class InMemoryDataService implements  InMemoryDbService  {
 
   createDb() {
     const libros = [
-      {id: 0,isbn:123,titulo:'asd',precio_de_venta:100,popular:true }
+      {id: 0,isbn:654623,titulo:'El coronel no tiene quien le escriba',precio_de_venta:10000,popular:true }
     ];
 
     return {libros};

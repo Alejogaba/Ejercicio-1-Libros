@@ -1,19 +1,18 @@
 <div>
-    <h6 class="h6"> Lista de tareas</h6>
   </div>
   <div>
     <table class="table">
-      <thead class="thead-dark">
+      <thead class="thead-light">
         <tr>
-          <th>Id</th>
-          <th>ISBN</th>
-          <th>Titulo</th>
-          <th>Precio de venta</th>
-          <th>Popular</th>
+          <th scope="col">Id</th>
+          <th scope="col">ISBN</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Precio de venta</th>
+          <th scope="col">Popular</th>
   
         </tr>
       </thead>
-      <tr *ngFor="let libro of libros">
+      <tr *ngFor="let libro of libros" scope="row">
         <td>{{libro.id}}</td>
         <td>{{libro.isbn}}</td>
         <td>{{libro.titulo}}</td>

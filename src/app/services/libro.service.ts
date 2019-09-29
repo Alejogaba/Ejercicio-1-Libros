@@ -28,10 +28,8 @@ export class LibroService {
   }
   get(): Observable<Libro[]> {
     return this.http.get<Libro[]>(this.libroUrl).pipe(
-      tap(tasks => {
-        return this.log('Consulta realizada');
-      }),
-      catchError(this.handleError<Libro[]>('get', [])));
+      tap(tasks => 
+      catchError(this.handleError<Libro[]>('get', []))));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
@@ -45,7 +43,7 @@ export class LibroService {
     };
   }
   private log(message: string) {
-    alert(`libroService: ${message}`);
+    alert(`${message}`);
    }
  
 
